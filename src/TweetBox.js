@@ -4,7 +4,7 @@ import './TweetBox.css';
 
 function TweetBox() {
   return (
-    <div class="tweetBox">
+    <div className="tweetBox">
       <form>
         <div className="tweetBox__input">
           <Avatar src="https://kajabi-storefronts-production.global.ssl.fastly.net/kajabi-storefronts-production/themes/284832/settings_images/rLlCifhXRJiT0RoN2FjK_Logo_roundbackground_black.png" />
