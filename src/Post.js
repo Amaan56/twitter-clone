@@ -7,31 +7,27 @@ import RepeatIcon from '@material-ui/icons/Repeat';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import PublishIcon from '@material-ui/icons/Publish';
 
-function Post() {
+function Post({ displayName, username, verified, text, image, avatar }) {
   return (
     <div className="post">
       <div className="post__avatar">
-        <Avatar src="https://kajabi-storefronts-production.global.ssl.fastly.net/kajabi-storefronts-production/themes/284832/settings_images/rLlCifhXRJiT0RoN2FjK_Logo_roundbackground_black.png" />
+        <Avatar src={avatar} />
       </div>
       <div className="post__body">
         <div className="post__header">
           <div className="post__headerText">
             <h3>
-              Akshar
+              {displayName}{' '}
               <span className="post__headerSpecial">
-                <VerifiedUserIcon className="post__badge" /> @AksharPathak
+                {verified && <VerifiedUserIcon className="post__badge" />} @
+                {username}
               </span>
             </h3>
           </div>
           <div className="post__headerDescription">
-            President-elect Biden on COVID: "I implore you... wear a mask... A
-            mask is not a political statement."
+            <p>{text}</p>
           </div>
-          <img
-            className="post__image"
-            src="https://pbs.twimg.com/media/EmZYpOjVkAARvCV?format=jpg&name=large"
-            alt="Image"
-          />
+          <img src={image} alt="" />
         </div>
         <div className="post__footer">
           <ChatBubbleOutlineIcon fontSize="small" />
